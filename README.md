@@ -16,6 +16,8 @@ The user interface was build using a web frontend since its impact on performanc
 * Scipy
 * OpenCV
 
+IMPORTANT! : in the framecapture file you can select the camera you would like the program to use. Since I typically use the second camera I set the selected camera to 1.
+
 # Background
 
 The amount of blood in skin affects the color of the skin. You may have noticed when someone is blushing that the color of their skin has changed. However, invisible to the naked eye the regular circulation of blood through the face also causes a similar yet far more subtle variance in color. By capturing the the frequency of this color change an accurate estimate of the pulserate can be made. 
