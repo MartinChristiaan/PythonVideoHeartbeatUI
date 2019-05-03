@@ -4,7 +4,7 @@
 
 ![Improved motion robustness with an interactive color-based skin classifier](skinClassified.gif)
 
-This application can be used for expirements with video pulserate detection. It features an implementation of the chrominance method described in ... and the PBV method described in ...
+This application can be used for expirements with video pulserate detection. It features an implementation of the chrominance method described in [1] and the PBV method described in [2]
 The user interface was build using a web frontend since its impact on performance is significantly lower than similar interfaces in Python.
 
 
@@ -38,6 +38,8 @@ With the PBV method the motion robuustness can be improved further in most scena
 
 # The files
 
+In this section the important script files within the project are discussed. 
+
 ## Start
 
 Run the start file with python to start the user-interface. This file contains the instructions that create the user interface and the main loop. The script is also responsible for starting the server. 
@@ -54,15 +56,15 @@ Initially the facetracker attempts to detect in the received frames using opencv
 
 The skin classifier attempts to blackout all the non-skin pixels remaining in the image. This is usefull for scenarios with a lot of motion since it reduces the color variations caused by the background.  
 
-## rppgsensor
+## RPPG Sensor
 
 the rppg sensor meassures the raw ppg signal by calculating the average pixel of the pixels left in the frame. 
 
-## signal processor
+## Signal processor
 
 The signal processor prepares the raw ppg signal for pulse detection by normalizing,detrending and bandpass filtering the signal. Afterwards, the signal is processed using either the chrominance or PBV method to find the pulse rate. 
 
-## evaluator
+## Evaluator
 
 The evaluator selects the pulse rate and determines the signal to noise ratio.
 
@@ -72,6 +74,9 @@ The server is based on the lightweight FLASK API. It handles communication with 
 
 # References
 
+1. Chrominance Method : Haan, G. De, & Jeanne, V. (2013). Robust pulse-rate from chrominance-based rPPG. (c), 1–9. https://doi.org/10.1109/TBME.2013.2266196
+2. PBV Method : Wang, W., den Brinker, A. C., Stuijk, S., & de Haan, G. (2016). Algorithmic Principles of Remote PPG. IEEE Transactions on Bio-Medical Engineering, 64(7), 1479–1491. https://doi.org/10.1109/TBME.2016.2609282
+3. Skin Classifier : https://www.pyimagesearch.com/2014/08/18/skin-detection-step-step-example-using-python-opencv/
 
 
 
