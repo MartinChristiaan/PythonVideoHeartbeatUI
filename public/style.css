@@ -1,0 +1,48 @@
+.maincontainer
+{   
+    display: grid;
+    grid-template-columns: 450px auto;
+    background: white    
+}
+
+.widgetcontainer
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 3fr;
+    
+     
+}
+.maincontrol
+{
+    display: grid;
+    grid-template-columns : 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+}
+.controlcolumn
+{
+    
+}
+
+.hbWidget
+{
+    display: grid;
+    grid-template-columns : 1fr 1fr;
+    vertical-align: middle;
+}
+.categoryContainer
+{
+    display: grid;
+    grid-template-columns : 1fr 1fr;
+    /* grid-template-rows : repeat(70,100px);*/ 
+    grid-auto-rows: 70px;
+}
+.figureContainer
+{
+    height: 300px;
+
+}
+.vizualcolumn
+{
+    display: grid;
+    grid-template-columns : 1fr 1fr;
+}
