@@ -1,4 +1,8 @@
+
+
 # Real Time Video Heartbeat Monitoring
+
+![Improved motion robustness with an interactive color-based skin classifier](skinClassified.gif)
 
 This application can be used for expirements with video pulserate detection. It features an implementation of the chrominance method described in ... and the PBV method described in ...
 The user interface was build using a web frontend since its impact on performance is significantly lower than similar interfaces in Python.
@@ -21,9 +25,10 @@ However, capturing this frequency is not an easy task. A number of factors such 
 # Demo
 
 The chrominance method robustly capturing the pulse rate (bpm) in a stationary situation 
-
 ![Standard Conifguration](default.gif)
+The motion robustness of the system can be improved with an interactive color-based skin classifier.
 ![Improved motion robustness with an interactive color-based skin classifier](skinClassified.gif)
+With the PBV method the motion robuustness can be improved further in most scenarios
 ![Further improved motion robustness with the PBV method](PBV.gif)
 
 
